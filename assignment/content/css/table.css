@@ -1,0 +1,20 @@
+h1{
+    font-size:30px;
+}
+/*Table Style One*/
+.table .table-header{
+    background:#FEC107;
+    color:#333;
+}
+.table .table-header .cell{
+    padding:20px;
+}
+@media screen and (max-width: 640px){
+    table {
+        overflow-x: auto;
+        display: block;
+    }
+    .table .table-header .cell{
+        padding:20px 5px;
+    }
+}

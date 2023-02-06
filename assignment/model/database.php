@@ -1,8 +1,11 @@
 <?php
 namespace model;
-require_once "env.php";
-class DB
+use PDO;
+
+require_once "model/env.php";
+class database
 {
+    
     public $connect;
 
 // tạo kết nối từ project php sang mysql
@@ -20,8 +23,6 @@ class DB
     {
         $this->connect = $this->getConnect();
     }
-#nếu như sử dụng câu truy vấn select thì ko cần truyền tham số getall nữa
-#nếu như sử dụng câu truy vấn thêm sửa xóa thì truyền là false vào
     public function getData($query, $getAll = true)
     {
         $stmt = $this->connect->prepare($query);

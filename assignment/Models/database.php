@@ -2,12 +2,10 @@
 namespace model;
 use PDO;
 
-require_once "model/env.php";
+require_once "Models/env.php";
 class database
 {
-    
     public $connect;
-
 // tạo kết nối từ project php sang mysql
     public function getConnect()
     {
